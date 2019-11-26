@@ -2,7 +2,7 @@
 #include "functions.c"
 
 int main(){
-	int option, loop = 1;
+	int option, loop = 1, result = 0;
 	No *bst;
 	
 	initBST(&bst);
@@ -42,7 +42,11 @@ int main(){
 			break;
 			
 			case 5:
-				//Mostrar a altura e profundidade da árvore
+				result = altura(bst);
+				if(result != -1){
+					printf("A altura/profundidade da árvore é: %d", result);
+				}
+				sleep(4);
 				//instructions
 			break;
 			
@@ -68,7 +72,8 @@ int main(){
 			break;
 			
 			default:
-				printf("Opção invalida, tente novamente...");
+				printf("Opção inválida, tente novamente...");
+				sleep(4);
 		}		
 	}
 		

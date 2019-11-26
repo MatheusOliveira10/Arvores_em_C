@@ -126,16 +126,16 @@ int menu(){
 	printf("=|----------------------------------------------------------|=\n");
 	printf("=|                         M E N U                          |=\n");
 	printf("==============================================================\n");
-	printf("=|  Selecione uma opcao:                                    |=\n");
+	printf("=|  Selecione uma opção:                                    |=\n");
 	printf("=|                                                          |=\n");
-	printf("=|  1- Imprimir a arvore em aninhamento / barras            |=\n");
-	printf("=|  2- Mostrar o no raiz                                    |=\n");
-	printf("=|  3- Mostrar os nos ramo                                  |=\n");
-	printf("=|  4- Mostrar os nos folha                                 |=\n");
-	printf("=|  5- Mostrar a altura e profundidade da arvore            |=\n");
-	printf("=|  6- Mostrar ancestrais e descendentes de um no           |=\n");
-	printf("=|  7- Mostrar grau, altura, profundidade e nivel de um no  |=\n");
-	printf("=|  8- Mostrar buscas em pre ordem, pos ordem e em ordem    |=\n");
+	printf("=|  1- Imprimir a árvore em aninhamento / barras            |=\n");
+	printf("=|  2- Mostrar o nó raiz                                    |=\n");
+	printf("=|  3- Mostrar os nós ramo                                  |=\n");
+	printf("=|  4- Mostrar os nós folha                                 |=\n");
+	printf("=|  5- Mostrar a altura e profundidade da árvore            |=\n");
+	printf("=|  6- Mostrar ancestrais e descendentes de um nó           |=\n");
+	printf("=|  7- Mostrar grau, altura, profundidade e nível de um nó  |=\n");
+	printf("=|  8- Mostrar buscas em pré ordem, pós ordem e em ordem    |=\n");
 	printf("=|                                                          |=\n");
 	printf("=|  0- Finalizar programa                                   |=\n");
 	printf("=|                                                          |=\n");
@@ -144,4 +144,21 @@ int menu(){
 	scanf("%d", &opcao);
 	system("cls");
 	return opcao;
+}
+
+// Devolve o altura de um nó h em uma árvore binária.
+
+int altura(No *tree) {
+
+    int a, b;
+    if (tree == NULL){
+    	return -1;
+	}
+    a = altura(tree->esq);
+    b = altura(tree->dir);
+    if (a > b) {
+    	return a+1;
+	}else {
+		return b+1;
+	}
 }
