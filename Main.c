@@ -67,8 +67,8 @@ int main(){
 				loop = 0;
 			break;
 			
-			default
-				printf("Opção inválida, tente novamente...");
+			default:
+				printf("Opção invalida, tente novamente...");
 		}		
 	}
 		
