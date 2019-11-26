@@ -114,3 +114,34 @@ void insertNode(No **tree, int num) {
 	else
 		pai->dir = novo;
 }
+
+//Menu ----------------------------------------
+int menu(){
+	
+	int opcao;
+	
+	system("cls");
+	printf("==============================================================");
+	printf("=|                    Binary Search Tree                    |=");
+	printf("=|----------------------------------------------------------|=");
+	printf("=|                         M E N U                          |=");
+	printf("==============================================================");
+	printf("=|  Selecione uma opção:                                    |=");
+	printf("=|                                                          |=");
+	printf("=|  1- Imprimir a árvore em aninhamento / barras            |=");
+	printf("=|  2- Mostrar o nó raiz                                    |=");
+	printf("=|  3- Mostrar os nós ramo                                  |=");
+	printf("=|  4- Mostrar os nós folha                                 |=");
+	printf("=|  5- Mostrar a altura e profundidade da árvore            |=");
+	printf("=|  6- Mostrar ancestrais e descendentes de um nó           |=");
+	printf("=|  7- Mostrar grau, altura, profundidade e nível de um nó  |=");
+	printf("=|  8- Mostrar buscas em pré ordem, pós ordem e em ordem    |=");
+	printf("=|                                                          |=");
+	printf("=|  0- Finalizar programa                                   |=");
+	printf("=|                                                          |=");
+	printf("==============================================================");
+	
+	scanf("%d", &opcao);
+	system("cls");
+	return opcao;
+}
