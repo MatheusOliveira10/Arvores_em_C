@@ -24,6 +24,9 @@ void preOrder(No *tree);
 void postOrder(No *tree);
 void inOrder(No *tree);
 
+int altura(No *tree);
+int profundidade(No *tree);
+
 int menu();
 
 #endif
