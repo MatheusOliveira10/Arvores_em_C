@@ -16,6 +16,12 @@ int main(){
 	insertNode(&bst, 48);
 	insertNode(&bst, 49);
 	insertNode(&bst, 47);
+	insertNode(&bst, 69);
+	insertNode(&bst, 73);
+	insertNode(&bst, 90);
+	insertNode(&bst, 55);
+	insertNode(&bst, 59);
+	insertNode(&bst, 43);
 	
 	while(loop){
 		option = menu();
@@ -28,16 +34,25 @@ int main(){
 			
 			case 2:
 				//Mostrar o nó raiz
+				printf("No raiz: ");
+				noRaiz(bst);
+				sleep(3);
 				//instructions
 			break;
 			
 			case 3:
 				//Mostrar os nós ramo
+				printf("Nos ramo: ");
+				nosRamo(bst);
+				sleep(3);
 				//instructions
 			break;
 			
 			case 4:
 				//Mostrar os nós folha
+				printf("Nos folha: ");
+				nosFolha(bst);
+				sleep(3);
 				//instructions
 			break;
 			

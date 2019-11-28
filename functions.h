@@ -29,6 +29,10 @@ int profundidade(No *tree);
 
 void ancestralNo(No *tree);
 
+void noRaiz(No *tree);
+void nosRamo(No *tree);
+void nosFolha(No *tree);
+
 int menu();
 
 #endif

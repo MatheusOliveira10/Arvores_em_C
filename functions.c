@@ -176,17 +176,57 @@ int grau_no(No *noAtual)
 			}
 	}
 	
-	void ancestralNo(No *tree){
-		No *aux;
-		if(tree->pai != NULL){
-			printf("Os ancestrais de %d sao: ", tree->dado);
-			aux = tree->pai;
-		while(aux->pai != NULL){
-			printf("%d ", aux->dado);
-			aux = aux->pai;
-		}
-		printf("%d ",aux->dado);
-		}else{
-			printf("Este no eh o no raiz");
-		}
+void ancestralNo(No *tree){
+	No *aux;
+	if(tree->pai != NULL){
+		printf("Os ancestrais de %d sao: ", tree->dado);
+		aux = tree->pai;
+	while(aux->pai != NULL){
+		printf("%d ", aux->dado);
+		aux = aux->pai;
 	}
+	printf("%d ",aux->dado);
+	}else{
+		printf("Este no eh o no raiz");
+	}
+}
+
+//Imprime o nó raiz
+void noRaiz (No *tree) {
+	
+	if(isBSTEmpty(tree)){
+		printf("A arvore esta vaiza!...");	
+	}else{
+		printf(" %d ", tree->dado);		
+	}
+	
+}
+
+//Imprime os nós ramo
+void nosRamo (No *tree) {
+	
+	if(tree->esq != NULL)
+	nosRamo(tree->esq);
+	
+	if((tree->pai != NULL) && ((tree->dir != NULL) || (tree->esq != NULL))){
+		printf(" %d ", tree->dado);
+	}	
+	
+	if(tree->dir != NULL)
+		nosRamo(tree->dir);	
+}
+
+//Imprime os nós folha
+void nosFolha(No *tree) {	
+	
+	if(tree->esq != NULL)
+		nosFolha(tree->esq);
+	
+	if((tree->pai != NULL) && ((tree->dir == NULL) && (tree->esq == NULL))){
+		printf(" %d ", tree->dado);
+	}	
+	
+	if(tree->dir != NULL)
+		nosFolha(tree->dir);	
+}
+
