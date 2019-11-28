@@ -42,20 +42,21 @@ int main(){
 			break;
 			
 			case 5:
+				//Mostrar a altura e profundidade da arvore
 				result = altura(bst);
 				if(result != -1){
-					printf("A altura/profundidade da árvore é: %d", result);
+					printf("A altura/profundidade da arvore eh: %d", result);
 				}else{
-					printf("A arvore está vazia!...");
+					printf("A arvore esta vazia!...");
 				}
-				sleep(4);
+				sleep(3);
 				//instructions
 			break;
 			
 			case 6:
 				//Mostrar ancestrais e descendentes de um nó
 				ancestralNo(bst->dir->dir);
-				sleep(4);
+				sleep(3);
 				//instructions
 			break;
 			
@@ -76,8 +77,8 @@ int main(){
 			break;
 			
 			default:
-				printf("Opção inválida, tente novamente...");
-				sleep(4);
+				printf("Opção invalida, tente novamente...");
+				sleep(3);
 		}		
 	}
 		

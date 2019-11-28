@@ -126,16 +126,16 @@ int menu(){
 	printf("=|----------------------------------------------------------|=\n");
 	printf("=|                         M E N U                          |=\n");
 	printf("==============================================================\n");
-	printf("=|  Selecione uma opção:                                    |=\n");
+	printf("=|  Selecione uma opcao:                                    |=\n");
 	printf("=|                                                          |=\n");
-	printf("=|  1- Imprimir a árvore em aninhamento / barras            |=\n");
-	printf("=|  2- Mostrar o nó raiz                                    |=\n");
-	printf("=|  3- Mostrar os nós ramo                                  |=\n");
-	printf("=|  4- Mostrar os nós folha                                 |=\n");
-	printf("=|  5- Mostrar a altura e profundidade da árvore            |=\n");
-	printf("=|  6- Mostrar ancestrais e descendentes de um nó           |=\n");
-	printf("=|  7- Mostrar grau, altura, profundidade e nível de um nó  |=\n");
-	printf("=|  8- Mostrar buscas em pré ordem, pós ordem e em ordem    |=\n");
+	printf("=|  1- Imprimir a arvore em aninhamento / barras            |=\n");
+	printf("=|  2- Mostrar o no raiz                                    |=\n");
+	printf("=|  3- Mostrar os nos ramo                                  |=\n");
+	printf("=|  4- Mostrar os nos folha                                 |=\n");
+	printf("=|  5- Mostrar a altura e profundidade da arvore            |=\n");
+	printf("=|  6- Mostrar ancestrais e descendentes de um no           |=\n");
+	printf("=|  7- Mostrar grau, altura, profundidade e nivel de um no  |=\n");
+	printf("=|  8- Mostrar buscas em pre ordem, pos ordem e em ordem    |=\n");
 	printf("=|                                                          |=\n");
 	printf("=|  0- Finalizar programa                                   |=\n");
 	printf("=|                                                          |=\n");
@@ -147,7 +147,6 @@ int menu(){
 }
 
 // Devolve o altura de um nó na árvore binária.
-
 int altura(No *tree) {
 
     int a, b;
@@ -180,7 +179,7 @@ int grau_no(No *noAtual)
 	void ancestralNo(No *tree){
 		No *aux;
 		if(tree->pai != NULL){
-			printf("Os ancestrais de %d são: ", tree->dado);
+			printf("Os ancestrais de %d sao: ", tree->dado);
 			aux = tree->pai;
 		while(aux->pai != NULL){
 			printf("%d ", aux->dado);
@@ -188,6 +187,6 @@ int grau_no(No *noAtual)
 		}
 		printf("%d ",aux->dado);
 		}else{
-			printf("Este nó é um nó raiz");
+			printf("Este no eh o no raiz");
 		}
 	}
