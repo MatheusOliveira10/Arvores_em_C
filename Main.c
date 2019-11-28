@@ -2,7 +2,7 @@
 #include "functions.c"
 
 int main(){
-	int option, loop = 1, result = 0;
+	int option, loop = 1, result = 0, a;
 	No *bst;
 	
 	initBST(&bst);
@@ -44,7 +44,7 @@ int main(){
 				//Mostrar os nós ramo
 				printf("Nos ramo: ");
 				nosRamo(bst);
-				sleep(3);
+				sleep(5);
 				//instructions
 			break;
 			
@@ -52,7 +52,7 @@ int main(){
 				//Mostrar os nós folha
 				printf("Nos folha: ");
 				nosFolha(bst);
-				sleep(3);
+				sleep(5);
 				//instructions
 			break;
 			
@@ -64,14 +64,14 @@ int main(){
 				}else{
 					printf("A arvore esta vazia!...");
 				}
-				sleep(3);
+				sleep(5);
 				//instructions
 			break;
 			
 			case 6:
 				//Mostrar ancestrais e descendentes de um nó
 				ancestralNo(bst->dir->dir);
-				sleep(3);
+				sleep(5);
 				//instructions
 			break;
 			
@@ -82,6 +82,13 @@ int main(){
 			
 			case 8:
 				//Mostrar buscas em pré ordem, pós ordem e em ordem
+				printf(" Pre Order: ");
+				preOrder(bst);
+				printf("\nPost Order: ");
+				postOrder(bst);
+				printf("\n  In Order: ");
+				inOrder(bst);				
+				sleep(5);
 				//instructions
 			break;
 			
@@ -93,17 +100,8 @@ int main(){
 			
 			default:
 				printf("Opção invalida, tente novamente...");
-				sleep(3);
+				sleep(5);
 		}		
-	}
-		
-	
-	printf(" Pre Order: ");
-	preOrder(bst);
-	printf("\nPost Order: ");
-	postOrder(bst);
-	printf("\n  In Order: ");
-	inOrder(bst);
-	
+	}	
 	return 0;
 }
