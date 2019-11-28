@@ -27,6 +27,8 @@ void inOrder(No *tree);
 int altura(No *tree);
 int profundidade(No *tree);
 
+void ancestralNo(No *tree);
+
 int menu();
 
 #endif

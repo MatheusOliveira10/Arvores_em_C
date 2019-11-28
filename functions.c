@@ -176,3 +176,18 @@ int grau_no(No *noAtual)
 				return grau;
 			}
 	}
+	
+	void ancestralNo(No *tree){
+		No *aux;
+		if(tree->pai != NULL){
+			printf("Os ancestrais de %d são: ", tree->dado);
+			aux = tree->pai;
+		while(aux->pai != NULL){
+			printf("%d ", aux->dado);
+			aux = aux->pai;
+		}
+		printf("%d ",aux->dado);
+		}else{
+			printf("Este nó é um nó raiz");
+		}
+	}

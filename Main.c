@@ -54,6 +54,8 @@ int main(){
 			
 			case 6:
 				//Mostrar ancestrais e descendentes de um nó
+				ancestralNo(bst->dir->dir);
+				sleep(4);
 				//instructions
 			break;
 			
