@@ -29,6 +29,9 @@ int main(){
 		switch(option){
 			case 1:
 				//Imprimir a árvore em aninhamento / barras
+				printf("Aninhamento: ");
+				printArvore(bst);
+				sleep(3);
 				//instructions
 			break;
 			
@@ -70,7 +73,9 @@ int main(){
 			
 			case 6:
 				//Mostrar ancestrais e descendentes de um nó
-				ancestralNo(bst->dir->dir);
+				ancestralNo(bst->dir->dir->dir);
+				printf("\nDescendentes: ");
+				descendenteNo(bst, bst->dado);
 				sleep(5);
 				//instructions
 			break;

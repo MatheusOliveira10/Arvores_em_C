@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include "functions.h"
 
+void printArvore(No* tree){
+	printf("( %d ", tree->dado);
+	
+	if(tree->esq != NULL)
+		printArvore(tree->esq);	
+		
+	//printf(")");
+	if(tree->dir != NULL)
+		printArvore(tree->dir);		
+	printf(")");	
+}
+
 void initBST(No **bst) {
 	*bst = NULL;
 }
@@ -189,6 +201,17 @@ void ancestralNo(No *tree){
 	}else{
 		printf("Este no eh o no raiz");
 	}
+}
+
+void descendenteNo(No* tree, int No){	
+	if(tree->esq != NULL)
+		descendenteNo(tree->esq, No);
+		
+	if(tree->dado != No)
+		printf(" %d ", tree->dado);
+	
+	if(tree->dir != NULL)
+		descendenteNo(tree->dir, No);
 }
 
 //Imprime o nó raiz

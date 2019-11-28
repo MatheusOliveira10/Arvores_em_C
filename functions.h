@@ -12,6 +12,7 @@ typedef struct _no{
 	struct _no *dir;
 } No;
 
+void printArvore (No*);
 
 void initBST (No**);
 bool isBSTEmpty (No*);
