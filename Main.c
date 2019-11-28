@@ -45,6 +45,8 @@ int main(){
 				result = altura(bst);
 				if(result != -1){
 					printf("A altura/profundidade da árvore é: %d", result);
+				}else{
+					printf("A arvore está vazia!...");
 				}
 				sleep(4);
 				//instructions

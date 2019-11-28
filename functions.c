@@ -146,7 +146,7 @@ int menu(){
 	return opcao;
 }
 
-// Devolve o altura de um nó h em uma árvore binária.
+// Devolve o altura de um nó na árvore binária.
 
 int altura(No *tree) {
 
@@ -162,3 +162,17 @@ int altura(No *tree) {
 		return b+1;
 	}
 }
+
+//Devolve o grau de um nó na árvore binária.
+int grau_no(No *noAtual)
+	{
+		if(noAtual != NULL)
+			{
+				int grau = 0;
+				if(noAtual->esq != NULL)
+					grau++;
+				if(noAtual->dir != NULL)
+					grau++;
+				return grau;
+			}
+	}
