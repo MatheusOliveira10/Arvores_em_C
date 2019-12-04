@@ -33,6 +33,8 @@ void ancestralNo(No *tree);
 void noRaiz(No *tree);
 void nosRamo(No *tree);
 void nosFolha(No *tree);
+int grau_no(No *tree);
+int nivelNo(No *tree);
 
 int menu();
 

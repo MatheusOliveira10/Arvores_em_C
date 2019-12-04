@@ -4,9 +4,9 @@
 int main(){
 	int option, loop = 1, result = 0, a;
 	No *bst;
-	
+
 	initBST(&bst);
-	
+
 	insertNode(&bst, 50);
 	insertNode(&bst, 40);
 	insertNode(&bst, 70);
@@ -22,10 +22,10 @@ int main(){
 	insertNode(&bst, 55);
 	insertNode(&bst, 59);
 	insertNode(&bst, 43);
-	
+
 	while(loop){
 		option = menu();
-		
+
 		switch(option){
 			case 1:
 				//Imprimir a árvore em aninhamento / barras
@@ -34,31 +34,31 @@ int main(){
 				sleep(3);
 				//instructions
 			break;
-			
+
 			case 2:
-				//Mostrar o nó raiz
+				//Mostrar o no raiz
 				printf("No raiz: ");
 				noRaiz(bst);
 				sleep(3);
 				//instructions
 			break;
-			
+
 			case 3:
-				//Mostrar os nós ramo
+				//Mostrar os nos ramo
 				printf("Nos ramo: ");
 				nosRamo(bst);
 				sleep(5);
 				//instructions
 			break;
-			
+
 			case 4:
-				//Mostrar os nós folha
+				//Mostrar os nos folha
 				printf("Nos folha: ");
 				nosFolha(bst);
 				sleep(5);
 				//instructions
 			break;
-			
+
 			case 5:
 				//Mostrar a altura e profundidade da arvore
 				result = altura(bst);
@@ -70,43 +70,53 @@ int main(){
 				sleep(5);
 				//instructions
 			break;
-			
+
 			case 6:
-				//Mostrar ancestrais e descendentes de um nó
+				//Mostrar ancestrais e descendentes de um no
+				printf("\nAncestrais: ");
 				ancestralNo(bst->dir->dir->dir);
 				printf("\nDescendentes: ");
 				descendenteNo(bst, bst->dado);
 				sleep(5);
 				//instructions
 			break;
-			
+
 			case 7:
-				//Mostrar grau, altura, profundidade e nível de um nó
+				//Mostrar grau, altura, e nível de um no
+				result = 0;
+				result = grau_no(bst->dir->esq);
+				printf("O grau do no: %d\n", result);
+				result = altura(bst->dir);
+				printf("A altura do no: %d\n", result); 
+				result = nivelNo(bst->dir->esq);
+				printf("O nivel do no: %d", result);
+				sleep(4);
+
 				//instructions
 			break;
-			
+
 			case 8:
 				//Mostrar buscas em pré ordem, pós ordem e em ordem
 				printf(" Pre Order: ");
 				preOrder(bst);
-				printf("\nPost Order: ");
+				printf("\nPos Order: ");
 				postOrder(bst);
-				printf("\n  In Order: ");
-				inOrder(bst);				
+				printf("\nEm Order: ");
+				inOrder(bst);
 				sleep(5);
 				//instructions
 			break;
-			
+
 			case 0:
 				//Finalizar programa
 				printf("Finalizando programa...");
 				loop = 0;
 			break;
-			
+
 			default:
 				printf("Opção invalida, tente novamente...");
 				sleep(5);
-		}		
-	}	
+		}
+	}
 	return 0;
 }
